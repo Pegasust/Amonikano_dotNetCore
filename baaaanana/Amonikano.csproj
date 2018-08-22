@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <RootNamespace>Amonikano</RootNamespace>
+    <AssemblyName>Amonikano</AssemblyName>
+    <ApplicationIcon />
+    <Win32Resource />
+    <StartupObject></StartupObject>
+    <Configurations>Debug;Release;Build</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;NETCOREAPP;NETCOREAPP2_1;DEBUG;NETCOREAPP;NETCOREAPP2_1;DEBUG;NETCOREAPP;NETCOREAPP2_1</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>bin\Debug\netcoreapp2.1\vs_built\</OutputPath>
+    <DocumentationFile></DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Build|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;BUILD;NETCOREAPP;NETCOREAPP2_1</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Discord.Net" Version="1.0.2" />
+    <PackageReference Include="Discord.Net.Commands" Version="1.0.2" />
+    <PackageReference Include="Discord.Net.Core" Version="1.0.2" />
+    <PackageReference Include="Discord.Net.WebSocket" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
